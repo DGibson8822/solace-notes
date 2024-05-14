@@ -9,7 +9,7 @@ async function seedNotes(client) {
       const createTable = await client.sql`
         CREATE TABLE IF NOT EXISTS notes (
           id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-          title VARCHAR(300) NOT NULL,
+          title VARCHAR(300),
           content VARCHAR(300) NOT NULL,
           updated_at TIMESTAMP NOT NULL DEFAULT NOW()
         );
