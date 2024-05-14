@@ -13,7 +13,7 @@ export default async function Home() {
         >
           New Note
         </Link>
-      {notes.map( (note) => <NotePreview key={note.id} note={note} /> )}
+      {notes.reverse().map( (note) => <NotePreview key={note.id} note={note} /> )}
     </main>
   );
 }

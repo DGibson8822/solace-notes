@@ -37,7 +37,7 @@ export async function createNote(prevState: State, formData: FormData) {
     if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: 'Missing fields. Failed to create note.',
+      message: 'Fields failed validation. Failed to create note.',
     };
     }
 
@@ -50,6 +50,44 @@ export async function createNote(prevState: State, formData: FormData) {
         VALUES (${title? title : 'Untitled'}, ${content} )
       `;
     } catch (error) {
+      return {
+        message: 'Database Error: Failed to create note.',
+      };
+    }
+
+    // Revalidate the cache for the invoices page and redirect the user.
+    revalidatePath('/');
+    redirect('/');
+}
+
+export async function updateNote(id: string, formData: FormData) {
+    console.log('hey')
+    // Validate form fields using Zod
+    const validatedFields = NoteFormSchema.safeParse({
+    title: formData.get('title'),
+    content: formData.get('content'),
+    });
+
+    // If form validation fails, return errors early. Otherwise, continue.
+    if (!validatedFields.success) {
+        console.log(`hey2 :`)
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message: 'Fields failed validation. Failed to update note.',
+    };
+    }
+
+    const { title, content } = validatedFields.data;
+    
+    // Attempt database insertion.
+    try {
+      await sql`
+        UPDATE notes
+        SET title = ${title}, content = ${content}, updated_at = NOW()
+        WHERE id = ${id}
+      `;
+    } catch (error) {
+        console.log(error)
       return {
         message: 'Database Error: Failed to create note.',
       };

@@ -18,3 +18,25 @@ export async function fetchNotes() {
       throw new Error('Failed to fetch all notes.');
     }
   }
+
+  export async function fetchNoteById(id: string) {
+    noStore();
+    console.log(`My ID: ${id}`)
+    try {
+      const data = await sql<Note>`
+        SELECT
+          notes.id,
+          notes.title,
+          notes.content
+        FROM notes
+        WHERE notes.id = ${id}`;
+
+      const notes = data.rows;
+      
+      return notes[0];
+    } catch (err) {
+      
+        console.error('Database Error:', err);
+      
+    }
+  }
