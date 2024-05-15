@@ -41,7 +41,7 @@ With more time, I would've improved various elements of the look, feel, and func
 - Suspense/Loading elements (currently loads too fast to notice, but good practice to have).
 - Icons, images, animations, interesting fonts.
 - Decrease redundancy of my various Button components.
-- Dark mode (I added this to an internal tool at a previous employer and everyone loved me lol).
+- Dark mode (I took the intiative of adding this to an internal tool at a previous employer and everyone loved me lol).
 - Support for multiple users / authentication.
 
 ### Struggles
