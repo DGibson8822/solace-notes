@@ -2,27 +2,32 @@ const notes = [
   {
     id: "3958dc9e-712f-4377-85e9-fec4b6a6442a",
     title: "A Note",
-    content: "Some note contents.",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacus sed turpis tincidunt id aliquet risus feugiat in ante. Diam quis enim lobortis scelerisque fermentum dui.",
   },
   {
     id: "3958dc9e-742f-4377-85e9-fec4b6a6442a",
     title: "Another Note",
-    content: "Some more note contents.",
+    content:
+      "Donec ultrices tincidunt arcu non sodales neque. Risus commodo viverra maecenas accumsan lacus. Vivamus at augue eget arcu. Pretium lectus quam id leo. ",
   },
   {
     id: "3958dc9e-737f-4377-85e9-fec4b6a6442a",
     title: "Yet Another Note",
-    content: "You guessed it, more note contents.",
+    content:
+      "Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Viverra tellus in hac habitasse. Commodo ullamcorper a lacus vestibulum sed arcu. ",
   },
   {
     id: "50ca3e18-62cd-11ee-8c99-0242ac120002",
-    title: "I'm having...",
-    content: "...trouble keeping up with this naming scheme.",
+    title: "Hello World",
+    content:
+      "Sed id semper risus in hendrerit gravida rutrum quisque non. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Tellus id interdum velit laoreet id donec ultrices tincidunt. ",
   },
   {
     id: "3958dc9e-787f-4377-85e9-fec4b6a6442a",
-    title: "It seems I have...",
-    content: "...painted myself into a corner here.",
+    title: "Hi Mom",
+    content:
+      " Senectus et netus et malesuada. Duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat.",
   },
   {
     id: "76d65c26-f784-44a2-ac19-586678f7c2f2",
