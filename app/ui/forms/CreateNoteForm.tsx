@@ -74,7 +74,7 @@ export default function CreateNoteForm() {
         >
           Cancel
         </Link>
-        <Button type="submit">Create Note</Button>
+        <Button type="submit" className='bg-[#d39009] hover:bg-[#deb260]'>Create Note</Button>
       </div>
     </form>
   );

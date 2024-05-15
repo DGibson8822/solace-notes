@@ -21,7 +21,6 @@ export async function fetchNotes() {
 
 export async function fetchNoteById(id: string) {
   noStore();
-  console.log(`My ID: ${id}`)
   try {
     const data = await sql<Note>`
       SELECT

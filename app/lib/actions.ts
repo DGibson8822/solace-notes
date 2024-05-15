@@ -61,7 +61,6 @@ export async function createNote(prevState: State, formData: FormData) {
 }
 
 export async function updateNote(id: string, formData: FormData) {
-    console.log('hey')
     // Validate form fields using Zod
     const validatedFields = NoteFormSchema.safeParse({
     title: formData.get('title'),
@@ -70,7 +69,6 @@ export async function updateNote(id: string, formData: FormData) {
 
     // If form validation fails, return errors early. Otherwise, continue.
     if (!validatedFields.success) {
-        console.log(`hey2 :`)
     return {
       errors: validatedFields.error.flatten().fieldErrors,
       message: 'Fields failed validation. Failed to update note.',
@@ -101,9 +99,10 @@ export async function updateNote(id: string, formData: FormData) {
 export async function deleteNote(id: string) {
     try {
       await sql`DELETE FROM notes WHERE id = ${id}`;
-      revalidatePath('/');
-      return { message: 'Deleted note.' };
+      
     } catch (error) {
       return { message: 'Database Error: Failed to Delete Invoice.' };
     }
+    revalidatePath('/');
+    redirect('/');
   }

@@ -2,6 +2,7 @@ import UpdateNoteForm from '@/app/ui/forms/UpdateNoteForm';
 import { fetchNoteById } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/app/ui/Breadcrumbs';
+import DeleteButton from '@/app/ui/buttons/DeleteButton';
  
 export default async function Page({ params }: { params: { id: string } }) {
     const id = params.id;
@@ -17,6 +18,7 @@ export default async function Page({ params }: { params: { id: string } }) {
          <Breadcrumbs breadcrumbs={breadcrumbs} />
         <main className='w-96'>
          <h1 className='text-center text-lg m-7'>Edit Note</h1>
+         <DeleteButton id={note.id}/>
         <UpdateNoteForm note={note} />
         </main>
       </>
