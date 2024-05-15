@@ -9,8 +9,7 @@ export default async function NoteTable({
   }) {
   const notes = await fetchFilteredNotes(query)
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
+    <main className="grid  lg:grid-cols-4 gap-10">
       {notes.reverse().map( (note) => <NotePreview key={note.id} note={note} /> )}
     </main>
   );

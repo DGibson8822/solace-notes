@@ -14,7 +14,7 @@ export default async function Home({
   //const notes = await fetchNotes()
   const query = searchParams?.query || '';
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex bg-[linear-gradient(45deg,#3f937c,#0000)] min-h-screen flex-col items-center justify-between p-24">
       <Search placeholder="Search notes" />
       <Link
           href="/notes/create"
