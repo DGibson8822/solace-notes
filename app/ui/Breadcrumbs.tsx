@@ -20,7 +20,10 @@ export default function Breadcrumbs({ breadcrumbs } : { breadcrumbs: Breadcrumb[
                 )     
                 })}
             </ul>
+            <Link
+              href='/'>
             <h1 className="text-white text-3xl font-serif">Taker of Notes</h1>
+            </Link>
           </div>
         </div>
       </div>
