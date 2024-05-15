@@ -1,26 +1,29 @@
-import UpdateNoteForm from '@/app/ui/forms/UpdateNoteForm';
-import { fetchNoteById } from '@/app/lib/data';
-import { notFound } from 'next/navigation';
-import Breadcrumbs from '@/app/ui/Breadcrumbs';
-import DeleteButton from '@/app/ui/buttons/DeleteButton';
- 
+import UpdateNoteForm from "@/app/ui/forms/UpdateNoteForm";
+import { fetchNoteById } from "@/app/lib/data";
+import { notFound } from "next/navigation";
+import Breadcrumbs from "@/app/ui/Breadcrumbs";
+import DeleteButton from "@/app/ui/buttons/DeleteButton";
+
 export default async function Page({ params }: { params: { id: string } }) {
-    const id = params.id;
-    const note = await fetchNoteById(id)
-    const breadcrumbs = [{text: 'Home', path:'/'}, {text: 'Edit', path: `/notes/edit/${id}`}]
+  const id = params.id;
+  const note = await fetchNoteById(id);
+  const breadcrumbs = [
+    { text: "Home", path: "/" },
+    { text: "Edit", path: `/notes/edit/${id}` },
+  ];
 
-    if (!note) {
+  if (!note) {
     notFound();
-    }
+  }
 
-    return (
-      <>
-         <Breadcrumbs breadcrumbs={breadcrumbs} />
-        <main className='w-96'>
-         <h1 className='text-center text-lg m-7'>Edit Note</h1>
-         <DeleteButton id={note.id}/>
+  return (
+    <>
+      <Breadcrumbs breadcrumbs={breadcrumbs} />
+      <main className="w-96">
+        <h1 className="text-center text-lg m-7">Edit Note</h1>
+        <DeleteButton id={note.id} />
         <UpdateNoteForm note={note} />
-        </main>
-      </>
-    );
+      </main>
+    </>
+  );
 }

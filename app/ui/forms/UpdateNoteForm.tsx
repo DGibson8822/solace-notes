@@ -1,18 +1,16 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Button } from '@/app/ui/buttons/Button';
-import { updateNote } from '@/app/lib/actions';
-import { useFormState } from 'react-dom';
-import { Note } from '../../lib/definitions';
+import Link from "next/link";
+import { Button } from "@/app/ui/buttons/Button";
+import { updateNote } from "@/app/lib/actions";
+import { useFormState } from "react-dom";
+import { Note } from "../../lib/definitions";
 
-export default function UpdateNoteForm({note}: {note: Note}) {
-    const updateNoteWithId = updateNote.bind(null, note.id);
+export default function UpdateNoteForm({ note }: { note: Note }) {
+  const updateNoteWithId = updateNote.bind(null, note.id);
   return (
     <form action={updateNoteWithId}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
-        
-
         {/* Title */}
         <div className="mb-4">
           <label htmlFor="amount" className="mb-2 block text-sm font-medium">
@@ -31,7 +29,6 @@ export default function UpdateNoteForm({note}: {note: Note}) {
             </div>
           </div>
         </div>
-        
 
         {/* Content */}
         <div className="mb-4">
@@ -40,18 +37,16 @@ export default function UpdateNoteForm({note}: {note: Note}) {
           </label>
           <div className="relative mt-2 rounded-md">
             <div className="relative">
-              <textarea id="content"
+              <textarea
+                id="content"
                 name="content"
                 placeholder="Content"
                 defaultValue={note.content}
-                className="peer h-48 block w-full rounded-md border border-gray-200 p-2 text-sm outline-2 placeholder:text-gray-500">
-              </textarea>
+                className="peer h-48 block w-full rounded-md border border-gray-200 p-2 text-sm outline-2 placeholder:text-gray-500"
+              ></textarea>
             </div>
           </div>
         </div>
-        
-
-        
       </div>
       <div className="mt-6 flex justify-end gap-4">
         <Link
@@ -60,7 +55,9 @@ export default function UpdateNoteForm({note}: {note: Note}) {
         >
           Cancel
         </Link>
-        <Button type="submit" className='bg-[#d39009] hover:bg-[#deb260]'>Update Note</Button>
+        <Button type="submit" className="bg-[#d39009] hover:bg-[#deb260]">
+          Update Note
+        </Button>
       </div>
     </form>
   );
