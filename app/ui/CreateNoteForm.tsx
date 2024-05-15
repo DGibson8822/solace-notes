@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@/app/ui/Button';
+import { Button } from '@/app/ui/buttons/Button';
 import { createNote } from '@/app/lib/actions';
 import { useFormState } from 'react-dom';
 

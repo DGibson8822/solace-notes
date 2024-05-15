@@ -97,3 +97,13 @@ export async function updateNote(id: string, formData: FormData) {
     revalidatePath('/');
     redirect('/');
 }
+
+export async function deleteNote(id: string) {
+    try {
+      await sql`DELETE FROM notes WHERE id = ${id}`;
+      revalidatePath('/');
+      return { message: 'Deleted note.' };
+    } catch (error) {
+      return { message: 'Database Error: Failed to Delete Invoice.' };
+    }
+  }
