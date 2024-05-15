@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} flex bg-[linear-gradient(45deg,#3f937c,#0000)] min-h-screen flex-col items-center p-16`}>
+        {children}
+      </body>
     </html>
   );
 }

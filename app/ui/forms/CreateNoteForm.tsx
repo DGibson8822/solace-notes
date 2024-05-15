@@ -9,7 +9,6 @@ export default function CreateNoteForm() {
   const initialState = { message: '', errors: {title: [], content: []} };
   const [state, dispatch] = useFormState(createNote, initialState);
 
-  console.log(state)
   return (
     <form action={dispatch}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
@@ -27,7 +26,7 @@ export default function CreateNoteForm() {
                 name="title"
                 type="text"
                 placeholder="Title"
-                className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                className="peer block w-full rounded-md border border-gray-200 p-2 text-sm outline-2 placeholder:text-gray-500"
               />
             </div>
           </div>
@@ -48,13 +47,12 @@ export default function CreateNoteForm() {
           </label>
           <div className="relative mt-2 rounded-md">
             <div className="relative">
-              <input
-                id="content"
+              <textarea id="content"
                 name="content"
-                type="text"
                 placeholder="Content"
-                className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
-              />
+                className="peer block w-full h-48 rounded-md border border-gray-200 p-2 text-sm outline-2 placeholder:text-gray-500"
+              >
+              </textarea>
             </div>
           </div>
         </div>

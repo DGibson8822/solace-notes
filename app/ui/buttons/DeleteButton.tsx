@@ -1,11 +1,11 @@
 import { deleteNote } from '@/app/lib/actions';
 
-export function DeleteNote({ id }: { id: string }) {
+export default function DeleteButton({ id }: { id: string }) {
     const deleteNoteWithId = deleteNote.bind(null, id);
     return (
         
       <form action={deleteNoteWithId}>
-        <button className="rounded-md bg-white h-10 mt-3 bg-gr text-sm border border-black p-2 font-medium hover:bg-gray-100 w-full">
+        <button className="rounded-md mr-2 w-[25%] bg-red-600 h-10 mt-3 mb-5 bg-gr text-sm border border-black p-2 font-medium transition-colors hover:bg-red-500">
           Delete
         </button>
       </form>

@@ -27,7 +27,8 @@ export async function fetchNoteById(id: string) {
       SELECT
         notes.id,
         notes.title,
-        notes.content
+        notes.content,
+        notes.updated_at
       FROM notes
       WHERE notes.id = ${id}`;
 

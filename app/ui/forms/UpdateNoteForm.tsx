@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/app/ui/buttons/Button';
 import { updateNote } from '@/app/lib/actions';
 import { useFormState } from 'react-dom';
-import { Note } from '../lib/definitions';
+import { Note } from '../../lib/definitions';
 
 export default function UpdateNoteForm({note}: {note: Note}) {
     const updateNoteWithId = updateNote.bind(null, note.id);
@@ -26,7 +26,7 @@ export default function UpdateNoteForm({note}: {note: Note}) {
                 type="text"
                 placeholder="Title"
                 defaultValue={note.title}
-                className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
+                className="peer block w-full rounded-md border border-gray-200 p-2 text-sm outline-2 placeholder:text-gray-500"
               />
             </div>
           </div>
@@ -40,14 +40,12 @@ export default function UpdateNoteForm({note}: {note: Note}) {
           </label>
           <div className="relative mt-2 rounded-md">
             <div className="relative">
-              <input
-                id="content"
+              <textarea id="content"
                 name="content"
-                type="text"
                 placeholder="Content"
                 defaultValue={note.content}
-                className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
-              />
+                className="peer h-48 block w-full rounded-md border border-gray-200 p-2 text-sm outline-2 placeholder:text-gray-500">
+              </textarea>
             </div>
           </div>
         </div>
@@ -62,7 +60,7 @@ export default function UpdateNoteForm({note}: {note: Note}) {
         >
           Cancel
         </Link>
-        <Button type="submit">Update Note</Button>
+        <Button type="submit" className='bg-[#d39009] hover:bg-[#deb260]'>Update Note</Button>
       </div>
     </form>
   );
