@@ -34,6 +34,7 @@ With more time, I would've improved various elements of the look, feel, and func
 
 - Pagination.
 - More descriptive errors, 404s, etc.
+- Unit tests.
 - Additional sorting. Currently I sort by most recently updated, however alphabetical sorting or even least recently updated might also be a nice options.
 - More accessibility and semantic html. There is some present, but I haven't done a thorough implementation.
 - Perhaps a popup modal for creating a new note on desktop, rather than a different page.
