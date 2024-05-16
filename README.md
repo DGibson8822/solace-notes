@@ -33,6 +33,7 @@ Had I decided to stick with what I was already familiar with, I probably would'v
 With more time, I would've improved various elements of the look, feel, and functionality. Including but not limited to:
 
 - Pagination.
+- More descriptive errors, 404s, etc.
 - Additional sorting. Currently I sort by most recently updated, however alphabetical sorting or even least recently updated might also be a nice options.
 - More accessibility and semantic html. There is some present, but I haven't done a thorough implementation.
 - Perhaps a popup modal for creating a new note on desktop, rather than a different page.
