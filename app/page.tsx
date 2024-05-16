@@ -1,9 +1,8 @@
-import NotePreview from "@/app/ui/NotePreview";
-import Link from "next/link";
-import { fetchNotes } from "@/app/lib/data";
 import Search from "./ui/Search";
 import NoteTable from "./ui/NoteTable";
 import Breadcrumbs from "./ui/Breadcrumbs";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home({
   searchParams,
