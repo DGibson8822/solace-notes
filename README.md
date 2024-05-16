@@ -72,7 +72,7 @@ POSTGRES_PASSWORD="***************"
 POSTGRES_DATABASE="***************"
 ```
 
-I wrote script to create the notes table seed the database with notes. Note required, but usefuly for quickly getting multiple notes to work with. The file is `/scripts/seed.js` and can be executed with the command:
+I wrote a script to create the notes table seed the database with sample notes. Not required, but useful for quickly getting multiple notes to work with. The file is `/scripts/seed.js` and can be executed with the command:
 
 ```bash
 npm run seed
