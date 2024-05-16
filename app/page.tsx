@@ -2,7 +2,7 @@ import Search from "./ui/Search";
 import NoteTable from "./ui/NoteTable";
 import Breadcrumbs from "./ui/Breadcrumbs";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 1;
 
 export default async function Home({
   searchParams,

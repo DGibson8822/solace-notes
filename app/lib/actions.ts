@@ -56,7 +56,7 @@ export async function createNote(prevState: State, formData: FormData) {
     };
   }
 
-  // Revalidate the cache for the invoices page and redirect the user.
+  // Revalidate the cache for the Notes page and redirect the user.
   revalidatePath("/");
   redirect("/");
 }
@@ -92,7 +92,7 @@ export async function updateNote(id: string, formData: FormData) {
     };
   }
 
-  // Revalidate the cache for the invoices page and redirect the user.
+  // Revalidate the cache for the notes page and redirect the user.
   revalidatePath("/");
   redirect("/");
 }
@@ -101,7 +101,7 @@ export async function deleteNote(id: string) {
   try {
     await sql`DELETE FROM notes WHERE id = ${id}`;
   } catch (error) {
-    return { message: "Database Error: Failed to Delete Invoice." };
+    return { message: "Database Error: Failed to Delete Note." };
   }
   revalidatePath("/");
   redirect("/");
