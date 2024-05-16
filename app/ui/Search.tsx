@@ -17,7 +17,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
       params.delete("query");
     }
     replace(`${pathname}?${params.toString()}`);
-  }, 1000);
+  }, 1000); // Wait until the user is done typing before querying the database.
 
   return (
     <div className="w-full h-10 max-w-screen-xl max-h-10 m-5 relative flex flex-1 flex-shrink-0">

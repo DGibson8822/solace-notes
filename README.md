@@ -47,7 +47,11 @@ With more time, I would've improved various elements of the look, feel, and func
 
 ### Struggles
 
-Only while putting this readme together at the end of working on this project did I notice that the "Visit" url Vercel provides me to load my app in the browser requires a login. I never noticed during development because I was always logged in. It took me longer than I'd like to admit to finally find the truly public link. I was beginning to wonder if it was a limitation of the free tier service and was very close to spinning up an EC2 and redeploying everything on AWS haha. The development itself was a fun learning process and I definitely see myself using Next.js again in the future.
+Only while putting this readme together at the end of working on this project did I notice that the "Visit" url Vercel provides me to load my app in the browser requires a login. I never noticed during development because I was always logged in. It took me longer than I'd like to admit to finally find the truly public link. I was beginning to wonder if it was a limitation of the free tier service and was very close to spinning up an EC2 and redeploying everything on AWS haha.
+
+Another thing that got me at first is Next's cache rendering the index page statically. This caused the notes displayed to sometimes be out of sync with the database. The de-sync only occurred when I was creating notes using the deployed app and my local version simultaneously. This is resolved now, however I intend to look deeper into the solution I employed to better understand why it works, as well as understand why the initial fix I tried did not work.
+
+Overall, the development has been a fun learning process and I definitely see myself using Next.js again in the future.
 
 ## View the Deployed App Online
 
