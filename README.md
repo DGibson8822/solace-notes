@@ -57,6 +57,8 @@ Only while putting this readme together at the end of working on this project di
 
 ### Database
 
+To make things easier for you all, I will be including my .env file in the zipped repo that I submit via Solace's form. It has my database settings, which are not sensitive as they are only used for this one-off project. Note, however that the .env is not present in the Github repo. So if you clone from there, you can follow the instructions below. Or just ask me to remove it from my gitignore and push it up, whichever is most convenient.
+
 Create a free Postgres database on the [Vercel](https://vercel.com/storage/postgres) platform, then copy the credentials to your .env file at the root of the project (if you don't already have one, create it). The credentials should take the formseen below. Alternately I can push my .env up if you all want it, since the data therein isn't exactly sensitive (I've only used it for this project.)
 
 ```bash
