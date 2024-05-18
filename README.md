@@ -22,6 +22,8 @@ As instructed, this is a simple note app in which a user can index, create, edit
 
 I decided to go with Next.js because I've never used it before. It struck me as an opportunity to simultaneously learn something new and demonstrate my adaptability. I selected a Postgres database in order to align with the current stack at Solace. The app and database are deployed on the Vercel platform, which was expedient and free. This app employs a similar color scheme to what I observed on Solace's home page.
 
+![image info](./screenshot.png)
+
 ## Hypotheticals & General Thoughts
 
 ### Technology
